@@ -10,7 +10,8 @@ import { MasterServService } from 'src/app/services/master-serv.service';
 })
 export class ResetComponent implements OnInit {
   ResetForm : FormGroup;
-  pattern = "^(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+  // pattern = "^(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+  pattern = "^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$";
   userId = "";
   confPasswordMatch = false;
   popupMsg = "";

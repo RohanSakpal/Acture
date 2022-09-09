@@ -15,7 +15,7 @@
             <div class="input">
                 <div class="inputBx">
                     <label>Password : </label>
-                    <input type="text" formControlName="password" #passwordId>
+                    <input type="password" formControlName="password" #passwordId>
                 </div>
                 <p class="errorMsg" *ngIf="password && password.invalid && password.touched">*Pls fill valid Password</p>
             </div>

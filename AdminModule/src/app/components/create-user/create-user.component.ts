@@ -11,6 +11,7 @@ import { MasterServService } from 'src/app/services/master-serv.service';
 export class CreateUserComponent implements OnInit {
   CreateForm : FormGroup;
   pattern = "^(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
+  //pattern = "^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$";
   confPasswordMatch = false;
   popupMsg = "";
   constructor(private route:Router,private serv:MasterServService) { }

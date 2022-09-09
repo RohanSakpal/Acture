@@ -10,9 +10,8 @@ import { MasterServService } from 'src/app/services/master-serv.service';
 })
 export class LoginComponent implements OnInit {
   LoginForm : FormGroup;
-  //pattern = "^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$";
   pattern = "^(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
-  @ViewChild('passwordId') passwordId!: ElementRef;
+  //pattern = "^(?=.?[A-Z])(?=.?[a-z])(?=.?[0-9])(?=.?[#?!@$%^&*-]).{8,}$";
   constructor(private route:Router,private serv:MasterServService) { }
 
   ngOnInit(): void {

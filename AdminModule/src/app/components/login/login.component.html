@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="logo">
+        <h1>Oxford Health <span>NHS</span></h1>
+        <h3>NHS Foundation Trust</h3>
+    </div>
+    <div class="formBx">
+        <form [formGroup]="LoginForm" autocomplete="off" (ngSubmit)="Submit()">
+            <div class="input">
+                    <div class="inputBx">
+                        <label>Username : </label>
+                        <input type="text" formControlName="username">
+                    </div>
+                    <p class="errorMsg" *ngIf="username && username.invalid && username.touched">*Pls fill valid User name</p>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label>Password : </label>
+                    <input type="text" formControlName="password" #passwordId>
+                </div>
+                <p class="errorMsg" *ngIf="password && password.invalid && password.touched">*Pls fill valid Password</p>
+            </div>
+            <div class="btn">
+                <button type="submit" [disabled]="!LoginForm.valid">Login</button>
+            </div>
+            <div class="btn">
+                <a>Forget Password</a>
+            </div>
+        </form>
+    </div>
+</div>

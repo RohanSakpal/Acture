@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="searchBx">
+        <input type="text" placeholder="Serach User" (input)="onSearchName($event.target.value)">
+    </div>
+    <div class="tableBx">
+        <table class="content-table">
+            <thead>
+                <tr>
+                    <th>UserId</th>
+                    <th>User Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userList">
+                    <td>{{user.userId}}</td>
+                    <td>{{user.userName}}</td>
+                    <td><a (click)="reset(user.userId)">Reset Password</a></td>
+                  </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

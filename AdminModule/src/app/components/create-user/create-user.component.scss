@@ -1,0 +1,114 @@
+.container {
+    border: 1px solid darkblue;
+    width: 70%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 90px;
+    text-align: center;
+    padding: 15px;
+    background: royalblue;
+    .logo {
+        margin: auto;
+        border: 1px solid black;
+        width: 55%;
+        padding: 5px 20px;
+        background: white;
+        h1 {
+            font-size: 40px;
+            font-weight: 500;
+            span {
+                font-size: 50px;
+                font-weight: bold;
+                color: white;
+                background: royalblue;
+                font-family: monospace;
+                font-style: italic;
+            }
+        }
+        h3 {
+            font-size: 25px;
+            font-weight: 400;
+            color: royalblue;
+        }
+
+    }
+    .formBx {
+        width: 55%;
+        margin: auto;
+        padding: 10px 0;
+        .input {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            .inputBx {
+                display: flex;
+                align-items: center;
+                #admin,#user {
+                    width: 25px;
+                }
+                #adminlabel,#userlabel {
+                    font-size: 20px;
+                    color: white;
+                    margin-right: 10px;
+                    cursor: pointer;
+                }
+                .labelCss {
+                    font-size: 20px;
+                    margin-right: 20px;
+                    width: 50%;
+                    color: white;
+                    letter-spacing: 0.8px;
+                }
+                .inputCss {
+                    border: 1px solid white;
+                    font-size: 20px;
+                    width: 50%;
+                    padding: 5px;
+                }
+            }
+            
+            .errorMsg {
+                font-size: 14px;
+                color: red;
+                display: flex;
+                justify-content: flex-end;
+                position: relative;
+                top: -40px;
+            }
+        }
+        .btn {
+            margin-bottom: 10px;
+            button {
+                font-size: 20px;
+                padding: 8px 70px;
+                border-radius: 20px;
+                border: 1px solid white;
+                cursor: pointer;
+                color: royalblue;
+            }
+            a {
+                color: white;
+                font-size: 17px;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.confirmPopup {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background: royalblue;
+    color: white;
+    h4 {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="logo">
+        <h1>Oxford Health <span>NHS</span></h1>
+        <h3>NHS Foundation Trust</h3>
+    </div>
+    <div class="formBx">
+        <form [formGroup]="CreateForm" autocomplete="off" (ngSubmit)="Submit()">
+            <div class="input">
+                    <div class="inputBx">
+                        <label class="labelCss">Name: </label>
+                        <input class="inputCss" type="text" formControlName="name">
+                    </div>
+                    <span class="errorMsg" *ngIf="name && name.invalid && name.touched">*Pls fill valid User name</span>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">Surname : </label>
+                    <input class="inputCss" type="text" formControlName="surname">
+                </div>
+                <span class="errorMsg" *ngIf="surname && surname.invalid && surname.touched">*Pls fill valid Password</span>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">Role : </label>
+                    <input class="inputCss" type="text" formControlName="role">
+                </div>
+                <span class="errorMsg" *ngIf="role && role.invalid && role.touched">*Pls fill valid Password</span>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">Username : </label>
+                    <input class="inputCss" type="text" formControlName="username">
+                </div>
+                <span class="errorMsg" *ngIf="username && username.invalid && username.touched">*Pls fill valid Password</span>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">Temporary Password : </label>
+                    <input class="inputCss" type="text" formControlName="temppassword">
+                </div>
+                <p class="errorMsg" *ngIf="temppassword && temppassword.invalid && temppassword.touched">*Pls fill valid Password</p>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">Confirm Password : </label>
+                    <input class="inputCss" type="text" formControlName="confirmpassword">
+                </div>
+                <p class="errorMsg" *ngIf="confirmpassword && confirmpassword.invalid && confirmpassword.touched">*Pls fill valid Password</p>
+            </div>
+            <div class="input">
+                <div class="inputBx">
+                    <label class="labelCss">User Type : </label>
+                    <input id="admin" type="radio" formControlName="usertype" for value="Admin">
+                     <label id="adminlabel" for="admin">Admin</label><br>
+                    <input id="user" type="radio" formControlName="usertype" value="User">
+                     <label id="userlabel" for="user">User</label><br>
+                </div>
+                <p class="errorMsg" *ngIf="usertype && usertype.invalid && usertype.touched">*Pls fill valid Password</p>
+            </div>
+            <div class="btn">
+                <button type="submit" [disabled]="!CreateForm.valid">Create</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="confirmPopup" *ngIf="confPasswordMatch">
+    <h4>{{popupMsg}}</h4>
+</div>
